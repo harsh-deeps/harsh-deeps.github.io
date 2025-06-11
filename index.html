@@ -48,7 +48,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
@@ -63,6 +63,25 @@
       padding-bottom: 0.5rem;
     }
 
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .about-container img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
     footer {
       background-color: var(--primary-color);
       color: white;
@@ -71,9 +90,14 @@
       margin-top: 2rem;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text {
+        padding: 0 1rem;
       }
     }
   </style>
@@ -82,7 +106,7 @@
 
   <header>
     <h1>Harshdeep Singh</h1>
-    <p>Quantum Algorithms • Quantum Machine Learning</p>
+    <p>Software Engineer • Web Developer • Tech Enthusiast</p>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -93,9 +117,14 @@
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>
-        Hi! I'm Harshdeep.
-      </p>
+      <div class="about-container">
+        <img src="hd_landscape.JPG" alt="Me, somewhere happy." />
+        <div class="about-text">
+          <p>
+            Hi! I'm Harshdeep.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section id="projects">
