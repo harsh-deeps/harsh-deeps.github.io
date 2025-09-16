@@ -208,6 +208,32 @@
       background-color: var(--accent-color);
     }
 
+    /* Research Image Section */
+    .research-image-container {
+      width: 100%;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .research-image {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+      transition: var(--transition);
+    }
+
+    .research-image:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -10px rgba(2, 12, 27, 0.7);
+    }
+
+    .image-caption {
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
     /* About Section */
     .about-container {
       display: grid;
@@ -702,6 +728,13 @@
   <!-- Research Section -->
   <section id="research">
     <h2 class="section-title">Research & Publications</h2>
+    
+    <!-- Research Image -->
+    <div class="research-image-container">
+      <img src="MyResearch03.png" alt="Research Areas and Interests" class="research-image">
+      <p class="image-caption">My research focuses on quantum algorithms, quantum machine learning, and quantum chemistry applications</p>
+    </div>
+    
     <div class="research-container">
       <div class="research-category">
         <h3>Journal Publications</h3>
