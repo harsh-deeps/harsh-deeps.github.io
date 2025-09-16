@@ -729,17 +729,19 @@
   <section id="research">
     <h2 class="section-title">Research & Publications</h2>
     
-<div class="research-container">
-    <div class="research-image">
-        <img src="MyResearch03.jpg" alt="Research Areas and Interests">
-    </div>
-    <div class="research-caption">
-        <p>My research focuses on quantum algorithms, quantum machine learning, and quantum chemistry applications</p>
+<div class="research-section">
+    <div class="research-container">
+        <div class="research-image">
+            <img src="MyResearch03.jpg" alt="Research Areas and Interests">
+        </div>
+        <div class="research-caption">
+            <p>My research focuses on quantum algorithms, quantum machine learning, and quantum chemistry applications</p>
+        </div>
     </div>
 </div>
 
 <style>
-.research-container {
+.research-section .research-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -748,22 +750,24 @@
     margin: auto;
 }
 
-.research-image, .research-caption {
-    flex: 1; /* each takes half of the space */
+.research-section .research-image,
+.research-section .research-caption {
+    flex: 1;
     padding: 20px;
 }
 
-.research-image img {
+.research-section .research-image img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.research-caption p {
+.research-section .research-caption p {
     font-size: 1.2rem;
     line-height: 1.5;
 }
 </style>
+
 
     
     <div class="research-container">
