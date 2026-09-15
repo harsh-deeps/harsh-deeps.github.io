@@ -208,32 +208,6 @@
       background-color: var(--accent-color);
     }
 
-    /* Research Image Section */
-    .research-image-container {
-      width: 100%;
-      margin: 40px 0;
-      text-align: center;
-    }
-
-    .research-image {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-      transition: var(--transition);
-    }
-
-    .research-image:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 30px -10px rgba(2, 12, 27, 0.7);
-    }
-
-    .image-caption {
-      color: var(--text-secondary);
-      font-style: italic;
-      margin-top: 15px;
-      font-size: 0.9rem;
-    }
-
     /* About Section */
     .about-container {
       display: grid;
@@ -287,6 +261,9 @@
     /* Research Section */
     .research-container {
       margin-top: 50px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .research-category {
@@ -302,9 +279,11 @@
 
     .research-list {
       list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .research-item {
+    .research-item, .presentation-item {
       background-color: var(--card-bg);
       margin-bottom: 20px;
       padding: 25px;
@@ -313,28 +292,35 @@
       border-left: 3px solid transparent;
     }
 
-    .research-item:hover {
+    .research-item:hover, .presentation-item:hover {
       border-left: 3px solid var(--accent-color);
       transform: translateX(5px);
     }
 
-    .research-title {
+    .research-title, .presentation-title {
       color: var(--text-primary);
       font-size: 1.2rem;
       margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     .research-authors {
       color: var(--text-secondary);
       font-style: italic;
       margin-bottom: 10px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
-    .research-journal {
+    .research-journal, .presentation-conference {
       color: var(--accent-color);
       margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .presentation-date {
+      color: var(--text-secondary);
       font-size: 0.9rem;
+      margin-bottom: 10px;
     }
 
     .research-links a {
@@ -347,37 +333,6 @@
 
     .research-links a:hover {
       color: var(--accent-color);
-    }
-
-    /* Presentations */
-    .presentation-item {
-      background-color: var(--card-bg);
-      margin-bottom: 20px;
-      padding: 25px;
-      border-radius: 5px;
-      transition: var(--transition);
-    }
-
-    .presentation-item:hover {
-      transform: translateY(-3px);
-    }
-
-    .presentation-title {
-      color: var(--text-primary);
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .presentation-conference {
-      color: var(--accent-color);
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-    }
-
-    .presentation-date {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      margin-bottom: 10px;
     }
 
     .award-badge {
@@ -715,9 +670,9 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-container">
       <div class="about-text">
-        <p>Hello! My name is Harshdeep, and I enjoy exploring different areas within quantum computation and information. I am currently working as a postdoctoral researcher in the Department of Microtechnology and Nanoscience (MC2) at Chalmers University of Technology, Gothenburg, Sweden, under Prof. Anton Frisk Kockum. I am currently involved in the quantum compilation team, focusing on building hardware-aware quantum compilers. <p>
-        <p>I completed my Ph.D. at the Centre for Computational and Data Sciences, Indian Institute of Technology (IIT) Kharagpur, where my research focused on variational quantum algorithms and their applications in chemical systems. </p>
-        <p>Prior to this, I completed my Master’s Degree in Physics from Jadavpur University, where I conducted research on the theoretical study of the electrical and optical properties of Nickel-doped Molybdenum Disulfide (MoS₂). I also hold a Bachelor’s Degree in Physics from Jadavpur University. </p>
+        <p>Hello! My name is Harshdeep, and I enjoy exploring different areas within quantum computation and information. I am currently working as a Postdoctoral Researcher in the Department of Microtechnology and Nanoscience at Chalmers University of Technology, Sweden (December 2025 - Present)[cite: 3]. I previously served as a Project Assistant at Chalmers in October–November 2025[cite: 3].</p>
+        <p>I completed my Ph.D. at the Centre for Computational and Data Sciences, Indian Institute of Technology (IIT) Kharagpur (August 2021 - November 2025), where my research focused on variational quantum algorithms and their applications in chemical systems[cite: 3]. </p>
+        <p>Prior to this, I completed my Master’s Degree in Physics from Jadavpur University (July 2019 - July 2021) with a final grade of 82.5%, conducting research on the theoretical study of the electrical and optical properties of Nickel-doped Molybdenum Disulfide (MoS₂)[cite: 3]. I also hold a Bachelor’s Degree in Physics from Jadavpur University (July 2016 - June 2019), graduating with First Class and a final grade of 76.2%[cite: 3]. </p>
         <p>I also have considerable experience in quantum machine learning and tensor networks. Throughout my academic journey, I have cultivated a strong foundation in both theoretical and computational aspects of physics, preparing me to contribute to cutting-edge research in quantum technologies.</p>
       </div>
       <div class="about-image">
@@ -730,111 +685,68 @@
 <section id="research">
     <h2 class="section-title">Research & Publications</h2>
 
-    <!-- Research Interests -->
-    <div class="research-container">
-        <div class="research-category research-interests">
-            <h3>Research Interests</h3>
-            <p>
-                My research lies at the intersection of quantum computation,
-                quantum information, and computational science. My interests
-                span quantum algorithms and simulation, quantum circuit
-                compilation and benchmarking, quantum dynamics, and quantum
-                machine learning. A central theme of my work is understanding
-                and exploiting the interplay between quantum algorithms,
-                computational problems, and realistic quantum hardware to
-                develop more efficient, reliable, and scalable approaches to
-                quantum computing.
-            </p>
-        </div>
-    </div>
-
-    <!-- Publications -->
-
-                <!-- More publications -->
-
-            </ul>
-        </div>
-    </div>
-</section>
-
-<style>
-.research-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.research-category {
-    margin-bottom: 45px;
-}
-
-.research-category h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.research-interests p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin: 0;
-    text-align: justify;
-}
-
-.research-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.research-item {
-    margin-bottom: 30px;
-}
-
-.research-title {
-    font-size: 1.15rem;
-    line-height: 1.4;
-    margin-bottom: 8px;
-}
-
-.research-authors {
-    font-size: 1rem;
-    margin-bottom: 4px;
-}
-
-.research-journal {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-</style>
-
-
-    
     <div class="research-container">
       <div class="research-category">
         <h3>Journal Publications</h3>
         <ul class="research-list">
           <li class="research-item">
-            <h4 class="research-title">Benchmarking of different optimizers in the variational quantum algorithms for applications in quantum chemistry</h4>
-            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra</p>
-            <p class="research-journal">The Journal of Chemical Physics, vol. 159, no. 4, Jul. 2023</p>
+            <h4 class="research-title">Benchmarking of different optimizers in the variational quantum algorithms for applications in quantum chemistry[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">The Journal of Chemical Physics, vol. 159, no. 4, Jul. 2023[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
             </div>
           </li>
           <li class="research-item">
-            <h4 class="research-title">Hückel molecular orbital theory on a quantum computer: A scalable system-agnostic variational implementation with compact encoding</h4>
-            <p class="research-authors">H. Singh, S. Majumder, S. Mishra</p>
-            <p class="research-journal">The Journal of Chemical Physics, vol. 160, no. 19, May 2024</p>
+            <h4 class="research-title">Hückel molecular orbital theory on a quantum computer: A scalable system-agnostic variational implementation with compact encoding[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, S. Mishra[cite: 3]</p>
+            <p class="research-journal">The Journal of Chemical Physics, vol. 160, no. 19, May 2024[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
             </div>
           </li>
           <li class="research-item">
-            <h4 class="research-title">SHARC-VQE: Simplified Hamiltonian approach with refinement and correction-enabled variational quantum eigensolver for molecular simulation</h4>
-            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra</p>
-            <p class="research-journal">The Journal of Chemical Physics, vol. 162, no. 11, Mar. 2025</p>
+            <h4 class="research-title">SHARC-VQE: Simplified Hamiltonian approach with refinement and correction enabled variational quantum eigensolver for molecular simulation[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">The Journal of Chemical Physics, vol. 162, no. 11, Mar. 2025[cite: 3]</p>
+            <div class="research-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
+            </div>
+          </li>
+          <li class="research-item">
+            <h4 class="research-title">Blockwise Optimization for Projective Variational Quantum Dynamics (BLOP-VQD): Algorithm and Implementation for Lattice Systems[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">The Journal of Chemical Physics, vol. 163, no. 12, Sep. 2025[cite: 3]</p>
+            <div class="research-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
+            </div>
+          </li>
+          <li class="research-item">
+            <h4 class="research-title">Quantum Computing for Molecular Systems: Part I: Quantum Circuit and Measurement[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">Resonance Journal of Science Education, Volume 31, Issue 5, pp 685-699, May 2026[cite: 3]</p>
+            <div class="research-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
+            </div>
+          </li>
+          <li class="research-item">
+            <h4 class="research-title">Quantum Computing for Molecular Systems: Part II Quantum Encoding[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">Resonance Journal of Science Education, Volume 31, Issue 6, pp 885-899, May 2026[cite: 3]</p>
+            <div class="research-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
+              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
+            </div>
+          </li>
+          <li class="research-item">
+            <h4 class="research-title">Quantum Computing for Molecular Systems: Part III: Quantum Algorithms[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra[cite: 3]</p>
+            <p class="research-journal">Resonance Journal of Science Education, Volume 31, Issue 8, pp 1185-1202, May 2026[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
@@ -847,18 +759,18 @@
         <h3>Conference Papers</h3>
         <ul class="research-list">
           <li class="research-item">
-            <h4 class="research-title">On the Study of Partial Qubit Hamiltonian for Efficient Molecular Simulation Using Variational Quantum Eigensolvers</h4>
-            <p class="research-authors">H. Singh, S. Mishra and S. Majumder</p>
-            <p class="research-journal">2023 International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security (iQ-CCHESS), Kottayam, India, 2023, pp. 1–6</p>
+            <h4 class="research-title">On the Study of Partial Qubit Hamiltonian for Efficient Molecular Simulation Using Variational Quantum Eigensolvers[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Mishra and S. Majumder[cite: 3]</p>
+            <p class="research-journal">2023 International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security (iQ-CCHESS), Kottayam, India, 2023, pp. 1–6[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
             </div>
           </li>
           <li class="research-item">
-            <h4 class="research-title">A Survey of Classical and Quantum Sequence Models</h4>
-            <p class="research-authors">I.-C. Chen, H. Singh, V. L. Anukruti, B. Quanz and K. Yogaraj</p>
-            <p class="research-journal">2024 16th International Conference on COMmunication Systems & NETworkS (COMSNETS), Bengaluru, India, 2024, pp. 1006–1011</p>
+            <h4 class="research-title">A Survey of Classical and Quantum Sequence Models[cite: 3]</h4>
+            <p class="research-authors">I.-C. Chen, H. Singh, V. L. Anukruti, B. Quanz and K. Yogaraj[cite: 3]</p>
+            <p class="research-journal">2024 16th International Conference on COMmunication Systems & NETworkS (COMSNETS), Bengaluru, India, 2024, pp. 1006–1011[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
@@ -871,27 +783,27 @@
         <h3>Preprints & Conference Proceedings</h3>
         <ul class="research-list">
           <li class="research-item">
-            <h4 class="research-title">Blockwise Optimization for Projective Variational Quantum Dynamics (BLOP-VQD): Algorithm and Implementation for Lattice Systems</h4>
-            <p class="research-authors">H. Singh, S. Majumder, and S. Mishra</p>
-            <p class="research-journal">arXiv:2503.18279 [quant-ph]</p>
+            <h4 class="research-title">Comparing and Learning Figures of Merit for Quantum Circuit Compilation[cite: 3]</h4>
+            <p class="research-authors">H. Singh, M. Richter, M. Granath, and A. Frisk Kockum[cite: 3]</p>
+            <p class="research-journal">arXiv:2607.03275v2, Jul. 03, 2026[cite: 3]</p>
+            <div class="research-links">
+              <a href="https://arxiv.org/abs/2607.03275v2"><i class="fas fa-external-link-alt"></i> View Paper</a>
+              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
+            </div>
+          </li>
+          <li class="research-item">
+            <h4 class="research-title">Extracting Information from Partial Hamiltonian of Simple Molecules for Designing Efficient Variational Quantum Eigensolvers[cite: 3]</h4>
+            <p class="research-authors">H. Singh, S. Mishra, and S. Majumder[cite: 3]</p>
+            <p class="research-journal">Optica Quantum 2.0 Conference and Exhibition, Technical Digest Series (Optica Publishing Group, 2023), paper QTu3A.18[cite: 3]</p>
             <div class="research-links">
               <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
             </div>
           </li>
           <li class="research-item">
-            <h4 class="research-title">Extracting Information from Partial Hamiltonian of Simple Molecules for Designing Efficient Variational Quantum Eigensolvers</h4>
-            <p class="research-authors">H. Singh, S. Mishra, and S. Majumder</p>
-            <p class="research-journal">Optica Quantum 2.0 Conference and Exhibition, Technical Digest Series (Optica Publishing Group, 2023), paper QTu3A.18</p>
-            <div class="research-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
-              <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
-            </div>
-          </li>
-          <li class="research-item">
-            <h4 class="research-title">Analytic Quantum Gradient Descent in Quantum Chemistry Simulations</h4>
-            <p class="research-authors">H. Singh</p>
-            <p class="research-journal">Opg.optica.org, Optica Publishing Group, 13 June 2022</p>
+            <h4 class="research-title">Analytic Quantum Gradient Descent in Quantum Chemistry Simulations[cite: 3]</h4>
+            <p class="research-authors">H. Singh[cite: 3]</p>
+            <p class="research-journal">Opg.optica.org, Optica Publishing Group, 13 June 2022[cite: 3]</p>
             <div class="research-links">
               <a href="https://opg.optica.org/abstract.cfm?uri=QUANTUM-2022-QW2A.4" target="_blank"><i class="fas fa-external-link-alt"></i> View Abstract</a>
               <a href="#"><i class="fas fa-quote-right"></i> Cite</a>
@@ -904,55 +816,65 @@
         <h3>Conference Presentations</h3>
         <ul class="research-list">
           <li class="presentation-item">
-            <h4 class="presentation-title">SHARC-VQE: Simplified Hamiltonian Approach with Refinement and Correction Enabled Variational Quantum Eigensolver for Molecular Simulation</h4>
-            <p class="presentation-conference">Quantum Simulation (QSim) Conference, University of Rhode Island, US</p>
-            <p class="presentation-date">12–16 September 2024</p>
+            <h4 class="presentation-title">QCOWPOST: A Quantum Compiler Based on Weighted Probability of Successful Trials[cite: 3]</h4>
+            <p class="presentation-conference">IEEE Quantum Week 2026, Toronto, Canada[cite: 3]</p>
+            <p class="presentation-date">24-28 September 2026[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Hückel molecular orbital theory on a quantum computer: A scalable system-agnostic variational implementation with compact encoding</h4>
-            <p class="presentation-conference">Quantum Australia, Sydney, Australia</p>
-            <p class="presentation-date">20–22 February 2024</p>
+            <h4 class="presentation-title">Comparing and learning figures of merit for quantum circuit compilation[cite: 3]</h4>
+            <p class="presentation-conference">Quantum Science Generation (QSG), University of Trento, Italy[cite: 3]</p>
+            <p class="presentation-date">4-8 May 2026[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Hybrid Classical-Quantum Algorithms for Applications in Quantum Chemistry</h4>
-            <p class="presentation-conference">Theoretical Chemistry Symposium (TCS) 2023, IIT Madras, India</p>
-            <p class="presentation-date">07–10 December 2023</p>
-            <span class="award-badge">ACS Best Poster Award</span>
+            <h4 class="presentation-title">SHARC-VQE: Simplified Hamiltonian Approach with Refinement and Correction Enabled Variational Quantum Eigensolver for Molecular Simulation[cite: 3]</h4>
+            <p class="presentation-conference">Quantum Simulation (QSim) Conference, University of Rhodes Island, US[cite: 3]</p>
+            <p class="presentation-date">12-16 September 2024[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">On The Study Of Partial Qubit Hamiltonian For Efficient Molecular Simulation Using Variational Quantum Eigensolvers</h4>
-            <p class="presentation-conference">IEEE International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security (iQ-CCHESS'23)</p>
-            <p class="presentation-date">15–16 September 2023</p>
+            <h4 class="presentation-title">Hückel molecular orbital theory on a quantum computer: A scalable system-agnostic variational implementation with compact encoding[cite: 3]</h4>
+            <p class="presentation-conference">Quantum Australia, Sydney, Australia[cite: 3]</p>
+            <p class="presentation-date">20-22 February 2024[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Partial Hamiltonian Analysis for Efficient Variational Quantum Eigensolvers</h4>
-            <p class="presentation-conference">International Conference on Quantum Computing and Communications (QCC2023), Punjab, India</p>
-            <p class="presentation-date">9–11 February 2023</p>
+            <h4 class="presentation-title">Hybrid Classical-Quantum Algorithms for Applications in Quantum Chemistry[cite: 3]</h4>
+            <p class="presentation-conference">Theoretical Chemistry Symposium (TCS) 2023, IIT Madras, India[cite: 3]</p>
+            <p class="presentation-date">07-10 December 2023[cite: 3]</p>
+            <span class="award-badge">ACS Best Poster Award[cite: 3]</span>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Tensor Networks in Quantum-Inspired and Quantum Machine Learning</h4>
-            <p class="presentation-conference">International Conference on Quantum Computing and Communications (QCC2023), Punjab, India</p>
-            <p class="presentation-date">9–11 February 2023</p>
+            <h4 class="presentation-title">On The Study Of Partial Qubit Hamiltonian For Efficient Molecular Simulation Using Variational Quantum Eigensolvers[cite: 3]</h4>
+            <p class="presentation-conference">IEEE International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security (iQ-CCHESS'23), IIIT Kottayam, Kerala, India[cite: 3]</p>
+            <p class="presentation-date">15-16 September 2023[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Benchmarking of Different Optimizers in the Variational Quantum Algorithms for Applications in Quantum Chemistry</h4>
-            <p class="presentation-conference">AIP Congress 2022 (COMMAD), Adelaide, Australia</p>
-            <p class="presentation-date">11–16 December 2022</p>
+            <h4 class="presentation-title">Partial Hamiltonian Analysis for Efficient Variational Quantum Eigensolvers[cite: 3]</h4>
+            <p class="presentation-conference">International Conference on Quantum Computing and Communications (QCC2023), Punjab, India[cite: 3]</p>
+            <p class="presentation-date">9-11 February 2023[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Tensor Networks assisted Quantum Computing for Applications in Machine Learning and Quantum Chemistry</h4>
-            <p class="presentation-conference">Second International Conference on AI and ML Systems, Bangalore, India</p>
-            <p class="presentation-date">12–15 October 2022</p>
+            <h4 class="presentation-title">Tensor Networks in Quantum-Inspired and Quantum Machine Learning[cite: 3]</h4>
+            <p class="presentation-conference">International Conference on Quantum Computing and Communications (QCC2023), Punjab, India[cite: 3]</p>
+            <p class="presentation-date">9-11 February 2023[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Variational Quantum Algorithms: An introduction and applications to quantum chemistry using Python</h4>
-            <p class="presentation-conference">SciPy India Conference, Bombay, India</p>
-            <p class="presentation-date">21–22 January 2022</p>
+            <h4 class="presentation-title">Benchmarking of Different Optimizers in the Variational Quantum Algorithms for Applications in Quantum Chemistry[cite: 3]</h4>
+            <p class="presentation-conference">AIP Congress 2022 (COMMAD), Adelaide, Australia[cite: 3]</p>
+            <p class="presentation-date">11-16 December 2022[cite: 3]</p>
           </li>
           <li class="presentation-item">
-            <h4 class="presentation-title">Introduction to Quantum Computation with Qiskit</h4>
-            <p class="presentation-conference">PyCon Indonesia</p>
-            <p class="presentation-date">4–5 December 2021</p>
+            <h4 class="presentation-title">Tensor Networks assisted Quantum Computing for Applications in Machine Learning and Quantum Chemistry[cite: 3]</h4>
+            <p class="presentation-conference">Second International Conference on AI and ML Systems, Bangalore, India[cite: 3]</p>
+            <p class="presentation-date">12-15 October 2022[cite: 3]</p>
+          </li>
+          <li class="presentation-item">
+            <h4 class="presentation-title">Variational Quantum Algorithms: An introduction and applications to quantum chemistry using Python[cite: 3]</h4>
+            <p class="presentation-conference">SciPy India Conference, Bombay, India[cite: 3]</p>
+            <p class="presentation-date">21-22 January 2022[cite: 3]</p>
+          </li>
+          <li class="presentation-item">
+            <h4 class="presentation-title">Introduction to Quantum Computation with Qiskit[cite: 3]</h4>
+            <p class="presentation-conference">PyCon Indonesia[cite: 3]</p>
+            <p class="presentation-date">4-5 December 2021[cite: 3]</p>
           </li>
         </ul>
       </div>
@@ -966,8 +888,8 @@
       <div class="project-card">
         <div class="project-image" style="background: url('https://via.placeholder.com/600x400/64ffda/0a192f?text=Quantum+ML') center/cover;"></div>
         <div class="project-content">
-          <h3 class="project-title">Quantum Machine Learning for Large Datasets</h3>
-          <p class="project-description">QIntern Program at Imperial College London focused on developing quantum ML approaches for large-scale datasets.</p>
+          <h3 class="project-title">Quantum Machine Learning for Large Datasets[cite: 3]</h3>
+          <p class="project-description">QIntern Program, Imperial College London, focused on developing quantum ML approaches for large-scale datasets (July-August, 2023)[cite: 3].</p>
           <div class="project-tech">
             <span>Qiskit</span>
             <span>Python</span>
@@ -981,8 +903,8 @@
       <div class="project-card">
         <div class="project-image" style="background: url('https://via.placeholder.com/600x400/64ffda/0a192f?text=Quantum+Transformer') center/cover;"></div>
         <div class="project-content">
-          <h3 class="project-title">Hybrid Algorithm for Quantum Transformer Models</h3>
-          <p class="project-description">Qiskit Advocate Mentorship Program project exploring properties of GPT in quantum transformer models.</p>
+          <h3 class="project-title">Hybrid Algorithm to Explore Properties of GPT in Quantum Transformer Models[cite: 3]</h3>
+          <p class="project-description">Qiskit Advocate Mentorship Program (QAMP) project exploring properties of GPT in quantum transformer models (April-July, 2023)[cite: 3].</p>
           <div class="project-tech">
             <span>Qiskit</span>
             <span>Python</span>
@@ -996,8 +918,8 @@
       <div class="project-card">
         <div class="project-image" style="background: url('https://via.placeholder.com/600x400/64ffda/0a192f?text=Tensor+Networks') center/cover;"></div>
         <div class="project-content">
-          <h3 class="project-title">Tensor Networks for Quantum Machine Learning</h3>
-          <p class="project-description">Research at Tata Consultancy Services (TCS) on tensor networks for quantum-inspired and quantum machine learning.</p>
+          <h3 class="project-title">Tensor Networks for quantum-inspired and quantum machine learning[cite: 3]</h3>
+          <p class="project-description">Research at Tata Consultancy Services (TCS) on tensor networks for quantum-inspired and quantum machine learning (February-April, 2022)[cite: 3].</p>
           <div class="project-tech">
             <span>Tensor Networks</span>
             <span>Python</span>
@@ -1011,8 +933,8 @@
       <div class="project-card">
         <div class="project-image" style="background: url('https://via.placeholder.com/600x400/64ffda/0a192f?text=Quantum+Randomness') center/cover;"></div>
         <div class="project-content">
-          <h3 class="project-title">Quantum Random Number Generator</h3>
-          <p class="project-description">First prize winning project at Qiskit Fall Fest Hackathon - random number generator using variational quantum circuits.</p>
+          <h3 class="project-title">Random Number Generator using a Variational Quantum Circuit[cite: 3]</h3>
+          <p class="project-description">First prize winning project at Qiskit Fall Fest Hackathon, Ahmadabad University Campaign (October 2021)[cite: 3].</p>
           <div class="project-tech">
             <span>Qiskit</span>
             <span>Quantum Circuits</span>
@@ -1037,8 +959,10 @@
           </div>
           <div class="contact-text">
             <h4>Email</h4>
-            <a href="mailto:harshdeeps036@gmail.com">harshdeeps036@gmail.com</a>
+            <a href="mailto:harshdeep.singh@chalmers.se">harshdeep.singh@chalmers.se</a>
           </div>
+
+        
         </div>
         <div class="contact-item">
           <div class="contact-icon">
@@ -1046,7 +970,7 @@
           </div>
           <div class="contact-text">
             <h4>GitHub</h4>
-            <a href="https://github.com/harshdeeps036" target="_blank">github.com/harshdeeps036</a>
+            <a href="https://github.com/harshdeeps036" target="_blank">github.com/harshdeeps036[cite: 3]</a>
           </div>
         </div>
         <div class="contact-item">
@@ -1055,7 +979,7 @@
           </div>
           <div class="contact-text">
             <h4>LinkedIn</h4>
-            <a href="#" target="_blank">linkedin.com/in/harshdeep</a>
+            <a href="https://www.linkedin.com/in/harshdeepsingh3/" target="_blank">linkedin.com/in/harshdeepsingh3/[cite: 3]</a>
           </div>
         </div>
         <div class="contact-item">
@@ -1064,7 +988,7 @@
           </div>
           <div class="contact-text">
             <h4>Location</h4>
-            <p>Punjab, India</p>
+            <p>Gothenburg, Sweden</p>
           </div>
         </div>
       </div>
@@ -1092,12 +1016,12 @@
   <footer>
     <div class="social-links">
       <a href="https://github.com/harshdeeps036" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-google-scholar"></i></a>
+      <a href="https://www.linkedin.com/in/harshdeepsingh3/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/harshdeeps3" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://scholar.google.com/citations?user=3Fdrz-sAAAAJ&hl=en&authuser=1" target="_blank"><i class="fab fa-google-scholar"></i></a>
     </div>
     <div class="copyright">
-      <p>© 2025 Harshdeep Singh. All rights reserved.</p>
+      <p>© 2026 Harshdeep Singh. All rights reserved.</p>
     </div>
   </footer>
 
