@@ -730,32 +730,101 @@
 <section id="research">
     <h2 class="section-title">Research & Publications</h2>
 
-    <div class="research-section">
-        <p>
-            My research focuses on quantum computation and quantum information,
-            with particular interests in quantum algorithms, quantum circuit
-            compilation, quantum benchmarking, quantum simulation, quantum
-            dynamics, and quantum machine learning. I am particularly interested
-            in understanding how quantum algorithms interact with realistic
-            hardware and in developing methods that make quantum computations
-            more efficient, reliable, and scalable.
-        </p>
+    <!-- Research Interests -->
+    <div class="research-container">
+        <div class="research-category research-interests">
+            <h3>Research Interests</h3>
+            <p>
+                My research lies at the intersection of quantum computation,
+                quantum information, and computational science. My interests
+                span quantum algorithms and simulation, quantum circuit
+                compilation and benchmarking, quantum dynamics, and quantum
+                machine learning. A central theme of my work is understanding
+                and exploiting the interplay between quantum algorithms,
+                computational problems, and realistic quantum hardware to
+                develop more efficient, reliable, and scalable approaches to
+                quantum computing.
+            </p>
+        </div>
+    </div>
+
+    <!-- Publications -->
+    <div class="research-container">
+        <div class="research-category">
+            <h3>Journal Publications</h3>
+            <ul class="research-list">
+
+                <li class="research-item">
+                    <h4 class="research-title">
+                        Benchmarking of different optimizers in the variational
+                        quantum algorithms for applications in quantum chemistry
+                    </h4>
+                    <p class="research-authors">
+                        H. Singh, S. Majumder, and S. Mishra
+                    </p>
+                    <p class="research-journal">
+                        The Journal of Chemical Physics, vol. 159, no. 4, Jul. 2023
+                    </p>
+
+                    <div class="research-links">
+                        <!-- links -->
+                    </div>
+                </li>
+
+                <!-- More publications -->
+
+            </ul>
+        </div>
     </div>
 </section>
 
 <style>
-.research-section {
+.research-container {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
 }
 
-.research-section p {
-    font-size: 1.2rem;
+.research-category {
+    margin-bottom: 45px;
+}
+
+.research-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.research-interests p {
+    font-size: 1.1rem;
     line-height: 1.7;
     margin: 0;
+    text-align: justify;
+}
+
+.research-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.research-item {
+    margin-bottom: 30px;
+}
+
+.research-title {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.research-authors {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.research-journal {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 </style>
 
